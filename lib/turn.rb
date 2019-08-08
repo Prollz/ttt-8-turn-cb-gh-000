@@ -7,15 +7,10 @@ def display_board(board)
 end
 
 def valid_move?(board, index)
-  if board[index] == "X" || board[index] == "O"
+  if index < board.length && board[index] == "X" || board[index] == "O"
     false
   else
     true
-  end
-  if index <= 8 && index >= 0
-    true
-  else
-    false
   end
 end
 

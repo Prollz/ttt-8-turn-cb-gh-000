@@ -7,14 +7,14 @@ def display_board(board)
 end
 
 def valid_move?(board, index)
+  if board[index] == "X" || board[index] == "O"
+    false
+  else
+    true
+  end
   if index <= 8 && index >= 0
     true
   else
-    if board[index] == "X" || board[index] == "O"
-      false
-    else
-      true
-    end
     false
   end
 end
@@ -26,6 +26,7 @@ end
 def move(board, index, input = "X")
   board[index] = input
 end
+
 def turn(board)
   puts "Please enter 1-9:"
   input = gets
